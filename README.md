@@ -23,15 +23,13 @@
 ## 📖 **Table of Contents**
 
 1. [Introduction](#introduction)
-2. [Repository Structure](#repository-structure)
-3. [Learning Path](#learning-path)
-4. [Theory Notes](#theory-notes)
-5. [Practical Implementations](#practical-implementations)
-6. [Research Resources](#research-resources)
-7. [Getting Started](#getting-started)
-8. [Contributing](#contributing)
-9. [Citation](#citation)
-10. [License](#license)
+2. [Learning Path](#learning-path)
+3. [Theory Notes](#theory-notes)
+4. [Practical Implementations](#practical-implementations)
+5. [Research Resources](#research-resources)
+6. [Getting Started](#getting-started)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ---
 
@@ -182,6 +180,7 @@ Transfer learning
 - Limitations
 ```
 
+# Getting Started
 # Prerequisites
 ```
 # Clone the repository
