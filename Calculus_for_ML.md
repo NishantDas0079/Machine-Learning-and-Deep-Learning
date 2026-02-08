@@ -82,3 +82,413 @@ class LinearRegression:
         ss_tot = np.sum((y_true - np.mean(y_true))**2)
         return 1 - (ss_res / ss_tot)
 ```
+
+# 4. Mathematical Derivation
+# Cost Function Derivation
+The mean squared error:
+
+J
+(
+θ
+)
+=
+1
+2
+m
+∑
+i
+=
+1
+m
+(
+h
+θ
+(
+x
+(
+i
+)
+)
+−
+y
+(
+i
+)
+)
+2
+J(θ)= 
+2m
+1
+​
+  
+i=1
+∑
+m
+​
+ (h 
+θ
+​
+ (x 
+(i)
+ )−y 
+(i)
+ ) 
+2
+ 
+where $h_\theta(x) = \theta^T x$.
+
+# Gradient Calculation
+# Partial derivatives:
+
+∂
+J
+∂
+θ
+j
+=
+1
+m
+∑
+i
+=
+1
+m
+(
+h
+θ
+(
+x
+(
+i
+)
+)
+−
+y
+(
+i
+)
+)
+x
+j
+(
+i
+)
+∂θ 
+j
+​
+ 
+∂J
+​
+ = 
+m
+1
+​
+  
+i=1
+∑
+m
+​
+ (h 
+θ
+​
+ (x 
+(i)
+ )−y 
+(i)
+ )x 
+j
+(i)
+​
+ 
+In matrix form:
+
+∇
+θ
+J
+(
+θ
+)
+=
+1
+m
+X
+T
+(
+X
+θ
+−
+y
+)
+∇ 
+θ
+​
+ J(θ)= 
+m
+1
+​
+ X 
+T
+ (Xθ−y)
+# Normal Equation Derivation
+Set gradient to zero:
+
+∇
+θ
+J
+(
+θ
+)
+=
+0
+∇ 
+θ
+​
+ J(θ)=0
+X
+T
+(
+X
+θ
+−
+y
+)
+=
+0
+X 
+T
+ (Xθ−y)=0
+X
+T
+X
+θ
+=
+X
+T
+y
+X 
+T
+ Xθ=X 
+T
+ y
+θ
+=
+(
+X
+T
+X
+)
+−
+1
+X
+T
+y
+θ=(X 
+T
+ X) 
+−1
+ X 
+T
+ y
+# 5. Advanced Topics
+# Regularization
+# Ridge Regression (L2 regularization):
+
+J
+(
+θ
+)
+=
+1
+2
+m
+[
+∑
+i
+=
+1
+m
+(
+h
+θ
+(
+x
+(
+i
+)
+)
+−
+y
+(
+i
+)
+)
+2
++
+λ
+∑
+j
+=
+1
+n
+θ
+j
+2
+]
+J(θ)= 
+2m
+1
+​
+ [ 
+i=1
+∑
+m
+​
+ (h 
+θ
+​
+ (x 
+(i)
+ )−y 
+(i)
+ ) 
+2
+ +λ 
+j=1
+∑
+n
+​
+ θ 
+j
+2
+​
+ ]
+# Lasso Regression (L1 regularization):
+
+J
+(
+θ
+)
+=
+1
+2
+m
+[
+∑
+i
+=
+1
+m
+(
+h
+θ
+(
+x
+(
+i
+)
+)
+−
+y
+(
+i
+)
+)
+2
++
+λ
+∑
+j
+=
+1
+n
+∣
+θ
+j
+∣
+]
+J(θ)= 
+2m
+1
+​
+ [ 
+i=1
+∑
+m
+​
+ (h 
+θ
+​
+ (x 
+(i)
+ )−y 
+(i)
+ ) 
+2
+ +λ 
+j=1
+∑
+n
+​
+ ∣θ 
+j
+​
+ ∣]
+# Polynomial Regression
+Extend to polynomial features:
+
+h
+θ
+(
+x
+)
+=
+θ
+0
++
+θ
+1
+x
++
+θ
+2
+x
+2
++
+⋯
++
+θ
+n
+x
+n
+h 
+θ
+​
+ (x)=θ 
+0
+​
+ +θ 
+1
+​
+ x+θ 
+2
+​
+ x 
+2
+ +⋯+θ 
+n
+​
+ x 
+n
+ 
+# 6. Assumptions and Diagnostics
+# Gauss-Markov Assumptions
+Linearity
+
+Independence
+
+Homoscedasticity
+
+No perfect multicollinearity
+
+Normally distributed errors
+
