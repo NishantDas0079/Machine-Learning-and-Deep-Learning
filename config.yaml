@@ -1,0 +1,26 @@
+# MNIST Configuration
+data:
+  dataset: "mnist"
+  image_size: [28, 28]
+  num_classes: 10
+  
+preprocessing:
+  normalize: true
+  validation_split: 0.1
+  
+traditional_ml:
+  models: ["svm", "random_forest", "knn", "logistic_regression"]
+  cv_folds: 5
+  
+neural_network:
+  epochs: 10
+  batch_size: 32
+  
+cnn:
+  epochs: 15
+  batch_size: 64
+  
+paths:
+  data_dir: "data/"
+  models_dir: "models/"
+  outputs_dir: "outputs/"
